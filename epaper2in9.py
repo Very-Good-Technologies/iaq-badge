@@ -32,13 +32,13 @@ import framebuf
 import utime
 
 # Display resolution
-EPD_WIDTH       = 296
-EPD_HEIGHT      = 128
+EPD_WIDTH       = 128
+EPD_HEIGHT      = 296
 
-RST_PIN         = 17
-DC_PIN          = 25
-CS_PIN          = 7
-BUSY_PIN        = 24
+RST_PIN         = 12
+DC_PIN          = 8
+CS_PIN          = 9
+BUSY_PIN        = 13
 
 WF_PARTIAL_2IN9 = [
     0x0,0x40,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,
@@ -78,6 +78,7 @@ class EPD_2in9_Portrait(framebuf.FrameBuffer):
         self.dc_pin = Pin(DC_PIN, Pin.OUT)
         
         self.buffer = bytearray(self.height * self.width // 8)
+
         super().__init__(self.buffer, self.width, self.height, framebuf.MONO_HLSB)
         self.init()
 
@@ -265,7 +266,6 @@ class EPD_2in9_Portrait(framebuf.FrameBuffer):
         self.delay_ms(2000)
         self.module_exit()
         
-
 class EPD_2in9_Landscape(framebuf.FrameBuffer):
     def __init__(self):
         self.reset_pin = Pin(RST_PIN, Pin.OUT)

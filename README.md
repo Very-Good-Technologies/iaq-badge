@@ -14,22 +14,22 @@ A conference size badge that is a air quality monitor, covering CO2, Temperature
 
 **Waveshare ePaper** 
 
-| Connection | PIN        |
-|------------|------------|
-| VCC        | 3.3v       |
-| GND        | GND        |
-| DIN        | GP11       |
-| CLK        | GP10       |
-| CS         | GP9        |
-| DC         | GP8        |
-| RST        | GP12       |
-| BUSY       | GP13       |
+| Connection | PIN        | Color   |
+|------------|------------|---------|
+| VCC        | 3.3v       | Gray    |
+| GND        | GND        | Brown   |
+| DIN        | GP11       | Blue    |
+| CLK        | GP10       | Yellow  |
+| CS         | GP9        | Orange  |
+| DC         | GP8        | Green   |
+| RST        | GP12       | White   |
+| BUSY       | GP13       | Purple  |
 
 **SCD41**
 
 | Connection | PIN        |
 |------------|------------|
-| VCC        | VBUS       |
+| VCC        | 3.3v       |
 | GND        | GND        |
 | I2C0 SDA   | GP4        | 
 | I2C0 SCL   | GP5        |
@@ -38,7 +38,7 @@ A conference size badge that is a air quality monitor, covering CO2, Temperature
 
 | Connection | PIN        |
 |------------|------------|
-| VCC        | VBUS       |
+| VCC        | VSYS       |
 | GND        | GND        |
 
 ### Modules
